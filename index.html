@@ -1,0 +1,281 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Angel S. Mendez - Home</title>
+    <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css"/>
+  </head>
+  <body>
+<!-- Toolbar --> 
+  <div class="toolbar">
+    <p>CONTACT</p>
+    <div class="dropdown">
+        <div id = top></div>
+        <div id = mid></div>
+        <div id = bot></div>
+      <button class="btn" type="button" id="dropdownmenu" data-toggle="dropdown" onclick="dropdown()">
+      </button>
+    </div>
+  </div>
+  <div class = wrapper>
+    <div id = drop_div class = drop_div>
+      <div>
+        <div class = "li">
+          <a href="https://www.linkedin.com/in/angsam" target="_blank"><div class = "li2"></div></a>
+        </div>
+      </div>
+
+      <div>
+        <div class = "gh">
+          <a href="https://www.github.com/angsam-git" target="_blank"><div class = "gh2"></div></a>
+        </div>
+      </div>
+
+      <div>
+        <div class = "email">
+          <a href="mailto: angelmendez074@gmail.com" target="_blank"><div class = "email2"></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "main_container">
+    <!-- Name --> 
+    <div class="name-wrap">
+      <div class="name" ><div class ="name_text"><p>ANGEL SAMUEL MENDEZ</p></div></div>
+      </div>
+
+    <!-- About me section --> 
+      <div class="about">
+        <p>About me</p>
+        <p>Currently a senior at Columbia University in New York City. On the side, I 
+          love to learn and improve my skills through a bit of software development. 
+          Check out some of my projects below!</p>
+          <div></div>
+          <div></div>
+      </div>
+  </div>
+  
+    <div class = "divider_one"></div>
+  <!-- project container --> 
+  <div class = "proj_container" id='proj_container'>
+  <input type="radio" name = "r3" id = "r6" checked>
+  <input type="radio" name = "r3" id = "r7">
+  <input type="radio" name = "r3" id = "r8">
+
+  <div class = "img_container" id='img_container'>
+    <a class = "prev" onclick="prevSlide(2)">&#10094;</a>
+    <a class = "next" onclick="nextSlide(2)">&#10095;</a>
+
+    <div class ="slides_container" id = 'slides_container'>
+      
+      <div class = "slide s8">
+        <img src = "static/images/melody.png" class = "proj_img"></img>
+      </div>
+
+      <div class = "slide s9">
+        <img src = "static/images/melody.gif" class = "proj_img"></img>
+      </div>
+
+      <div class = "slide s10">
+        <img src = "static/images/melodydb.png" class = "proj_img"></img>
+      </div>
+
+      <div class = "slide s11"></div>
+
+      <div class = "img_nav">
+        <label for="r6" class="circle"></label>
+        <label for="r7" class="circle"></label>
+        <label for="r8" class="circle"></label>
+      </div>
+    </div>
+  </div>
+  <div class = "proj_txt" id = 'proj_txt'>
+    <h1>
+      MelodyDB
+    </h1>
+    <img src = "static/images/python_icon.png" class = "language_img"></img>
+    <p>
+      Think of it as an IMDB but for music. This 
+      database contains thousands of songs, albums, and 
+      artists and information about them. Additional features
+      include allowing users to review and rate
+      songs, as well as administrator accounts to
+      moderate such behavior. PSQL Database filled with
+      data from the Spotify API.
+    </p>
+
+    <a href = "https://github.com/angsam-git/MelodyDB" target="_blank" class="proj_git"><img src = "static/images/github-light.png" style="height: 100%; width: auto;"></img></a>
+
+  </div>
+  </div>
+  <div class = "divider"></div>   
+  <!-- project container --> 
+  <div class = "proj_container" id='proj_container'>
+  <input type="radio" name = "r2" id = "r3" checked>
+  <input type="radio" name = "r2" id = "r4">
+  <input type="radio" name = "r2" id = "r5">
+
+  <div class = "img_container" id='img_container'>
+    <a class = "prev" onclick="prevSlide(1)">&#10094;</a>
+    <a class = "next" onclick="nextSlide(1)">&#10095;</a>
+
+    <div class ="slides_container" id = 'slides_container'>
+      
+      <div class = "slide s4">
+        <img src = "static/images/srnode.PNG" class = "proj_img"></img>
+      </div>
+
+      <div class = "slide s5">
+        <img src = "static/images/sr.gif" class = "proj_img"></img>
+      </div>
+
+      <div class = "slide s6">
+        <img src = "static/images/selectiverepeat.png" class = "proj_img"></img>
+      </div>
+
+      <div class = "slide s7"></div>
+
+      <div class = "img_nav">
+        <label for="r3" class="circle"></label>
+        <label for="r4" class="circle"></label>
+        <label for="r5" class="circle"></label>
+      </div>
+    </div>
+  </div>
+  <div class = "proj_txt" id = 'proj_txt'>
+    <h1>
+      Selective Repeat </br>
+      Protocol Emulator
+    </h1>
+    <img src = "static/images/c_icon.png" class = "language_img"></img>
+
+    <p>
+      Emulation of the selective repeat protocol.
+      Packets are represented as chars. Program 
+      features allow for dropping packets and ACKs on a
+      deterministic and probabilistic basis. Utilizes
+      socket programming and multithreading to
+      send and receive packets.
+    </p>
+
+    <a href = "https://github.com/angsam-git/SR-Emulator" target="_blank" class="proj_git"><img src = "static/images/github-light.png" style="height: 100%; width: auto;"></img></a>
+
+  </div>
+  </div>
+  <div class = "divider"></div>
+
+  <!-- project container --> 
+    <div class = "proj_container" id='proj_container'>
+      <input type="radio" name = "r" id = "r0" checked>
+      <input type="radio" name = "r" id = "r1">
+      <input type="radio" name = "r" id = "r2">
+
+      <div class = "img_container" id='img_container'>
+        <a class = "prev" onclick="prevSlide(0)">&#10094;</a>
+        <a class = "next" onclick="nextSlide(0)">&#10095;</a>
+
+        <div class ="slides_container" id = 'slides_container'>
+          
+          <div class = "slide s0">
+            <img src = "static/images/iw2.png" class = "proj_img"></img>
+          </div>
+
+          <div class = "slide s1">
+            <img src = "static/images/iw.gif" class = "proj_img"></img>
+          </div>
+
+          <div class = "slide s2">
+            <img src = "static/images/iw.png" class = "proj_img"></img>
+          </div>
+
+          <div class = "slide s3"></div>
+
+          <div class = "img_nav">
+            <label for="r0" class="circle"></label>
+            <label for="r1" class="circle"></label>
+            <label for="r2" class="circle"></label>
+          </div>
+        </div>
+      </div>
+      <div class = "proj_txt" id = 'proj_txt'>
+        <h1>
+          InspireWeather
+        </h1>
+        <img src = "static/images/java.png" class = "language_img"></img>
+
+        <p>
+          This is an app that provides inspirational
+          quotes along with a full weather report. 
+          Features allow for browsing the weather forecast
+          based on both an hourly and daily basis. Each
+          weather card displays with an icon displaying
+          the appropriate weather. Utilizes the DarkSky API
+          and the Google Places API.
+        </p>
+
+        <a href = "https://github.com/angsam-git/InspireWeather" target="_blank" class="proj_git"><img src = "static/images/github-light.png" style="height: 100%; width: auto;"></img></a>
+
+      </div>
+    </div>
+    <div class = "divider"></div>
+
+    <!-- project container --> 
+  <div class = "proj_container" id='proj_container'>
+    <input type="radio" name = "r4" id = "r9" checked>
+    <input type="radio" name = "r4" id = "r10">
+    <input type="radio" name = "r4" id = "r11">
+  
+    <div class = "img_container" id='img_container'>
+      <a class = "prev" onclick="prevSlide(3)">&#10094;</a>
+      <a class = "next" onclick="nextSlide(3)">&#10095;</a>
+  
+      <div class ="slides_container" id = 'slides_container'>
+        
+        <div class = "slide s12">
+          <img src = "static/images/nooks2.png" class = "proj_img"></img>
+        </div>
+  
+        <div class = "slide s13">
+          <img src = "static/images/nooks3.png" class = "proj_img"></img>
+        </div>
+  
+        <div class = "slide s14">
+          <img src = "static/images/nooks.png" class = "proj_img"></img>
+        </div>
+  
+        <div class = "slide s15"></div>
+  
+        <div class = "img_nav">
+          <label for="r9" class="circle"></label>
+          <label for="r10" class="circle"></label>
+          <label for="r11" class="circle"></label>
+        </div>
+      </div>
+    </div>
+    <div class = "proj_txt" id = 'proj_txt'>
+      <h1>
+        Nooks
+      </h1>
+      <img src = "static/images/rails_icon.png" class = "language_img"></img>
+      <p>
+        Apartment hunting website which organizes the apartment hunting process. 
+        It allows users to add and track their apartment listings and see them on a map
+        through the Google Geocoding API. It can also serve
+        as a collaborative space which allows users to create groups with
+        their friends. Currently WIP.
+      </p>
+  
+      <a href = "https://github.com/angsam-git/nooks" target="_blank" class="proj_git"><img src = "static/images/github-light.png" style="height: 100%; width: auto;"></img></a>
+  
+    </div>
+    </div>
+    <div class = "divider"></div>   
+    <div class = "footer"></div>
+    <script src="static/animations.js"></script>
+    <script src="static/wrapper.js"></script>
+    <script src="static/nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
