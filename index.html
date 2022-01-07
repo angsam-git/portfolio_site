@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -6,275 +7,227 @@
     <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
     <link rel="stylesheet" href="static/style.css"/>
     <link rel="preload" as="image" href="static/images/melodydb.png" />
+    <link rel="icon" type="image/png" href="static/images/favicon_16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="static/images/favicon_32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="static/images/favicon_96.png" sizes="96x96">
   </head>
-  <body onload="wrapDiv();">
-<!-- Toolbar --> 
-  <div class="toolbar">
-    <p>CONTACT</p>
-    <div class="dropdown">
-        <div id = top></div>
-        <div id = mid></div>
-        <div id = bot></div>
-      <button class="btn" type="button" id="dropdownmenu" data-toggle="dropdown" onclick="dropdown()">
-      </button>
+  <body onload="loadUp()">
+
+    <div class = "main_div">
+      <div class = "logo_conceal" id = "logo_conceal"></div>
+      <div class = "toolbar" id = "toolbar">
+        <a href ="https://www.ang-sam.com"><div class = "logo_button"></div></a>
+        <div class = "links" id = "links">
+          <div><p><a href="https://www.github.com/angsam-git" target="_blank">GITHUB</a></p></div>
+          <div><p><a href="https://www.linkedin.com/in/angsam" target="_blank">LINKEDIN</a></p></div>
+          <div><p><a href= "mailto: angelmendez074@gmail.com">CONTACT</a></p></div>
+        </div>
+        <div class="dropdown" id = "drop_down">
+          <div id = top_d></div>
+          <div id = mid_d></div>
+          <div id = bot_d></div>
+          <button class="btn" type="button" id="dropdownmenu" data-toggle="dropdown" onclick="dropdown()"></button>
+        </div>
+      </div>
+      <div class = wrapper>
+        <div id = drop_div class = drop_div>
+          <div>
+            <div class = "li" id = "li">
+              <a href="https://www.linkedin.com/in/angsam" target="_blank"><div class = "li2"></div></a>
+            </div>
+          </div>
+
+          <div>
+            <div class = "gh" id = "gh">
+              <a href="https://www.github.com/angsam-git" target="_blank"><div class = "gh2"></div></a>
+            </div>
+          </div>
+    
+          <div>
+            <div class = "email" id = "email">
+              <a href="mailto: angelmendez074@gmail.com" target="_blank"><div class = "email2"></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class = "logo_wrapper" id = "logo_wrapper">
+        <div class = "logo_bg_s" id = "logo_bg_s"></div>
+      </div>
+      <div class = "logo_bg_a" id = "logo_bg_a"></div>
+
+
+      <div class = "logo_bg_ma" id = "logo_bg_ma"></div>
+      <div class = "logo_bg_mb" id = "logo_bg_mb"></div>
+
+      <div class = "title"><p>ANGEL SAMUEL MENDEZ</p><p>Student Developer</p></div>
+
+      <div class="scroll_div">
+
+        <div>
+          <span class="scroll_arrows top" id = "top"></span>
+          <span class="scroll_arrows mid" id = "mid"></span>
+          <span class="scroll_arrows bot" id = "bot"></span>
+        </div>
+      </div>
+      
     </div>
-  </div>
-  <div class = wrapper>
-    <div id = drop_div class = drop_div>
-      <div>
-        <div class = "li">
-          <a href="https://www.linkedin.com/in/angsam" target="_blank"><div class = "li2"></div></a>
-        </div>
-      </div>
 
+    <div class="about">
       <div>
-        <div class = "gh">
-          <a href="https://www.github.com/angsam-git" target="_blank"><div class = "gh2"></div></a>
-        </div>
-      </div>
-
-      <div>
-        <div class = "email">
-          <a href="mailto: angelmendez074@gmail.com" target="_blank"><div class = "email2"></div></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class = "main_container">
-    <!-- Name --> 
-    <div class="name-wrap">
-      <div class="name" ><div class ="name_text"><p>ANGEL SAMUEL MENDEZ</p></div></div>
-      </div>
-
-    <!-- About me section --> 
-      <div class="about">
         <p>About me</p>
-        <p>Currently a senior at Columbia University in New York City. On the side, I 
+        <div>
+          <p id = "about_text">Currently a senior at Columbia University in New York City. On the side, I 
           love to learn and improve my skills through a bit of software development. 
           Check out some of my projects below!</p>
-          <div></div>
-          <div></div>
-      </div>
-  </div>
-  
-    <div class = "divider_one"></div>
-  <!-- project container --> 
-  <div class = "proj_container" id='proj_container'>
-  <input type="radio" name = "r3" id = "r6" checked>
-  <input type="radio" name = "r3" id = "r7">
-  <input type="radio" name = "r3" id = "r8">
-
-  <div class = "img_container" id='img_container'>
-    <a class = "prev" onclick="prevSlide(2)">&#10094;</a>
-    <a class = "next" onclick="nextSlide(2)">&#10095;</a>
-
-    <div class ="slides_container" id = 'slides_container'>
-      
-      <div class = "slide s8">
-        <img src = "static/images/melody.png" class = "proj_img"></img>
-      </div>
-
-      <div class = "slide s9">
-        <img src = "static/images/melody.gif" class = "proj_img"></img>
-      </div>
-
-      <div class = "slide s10">
-        <img src = "static/images/melodydb.png" class = "proj_img"></img>
-      </div>
-
-      <div class = "slide s11"></div>
-
-      <div class = "img_nav">
-        <label for="r6" class="circle"></label>
-        <label for="r7" class="circle"></label>
-        <label for="r8" class="circle"></label>
+        </div>
       </div>
     </div>
-  </div>
-  <div class = "proj_txt" id = 'proj_txt'>
-    <h1>
-      MelodyDB
-    </h1>
-    <img src = "static/images/python_icon.png" class = "language_img"></img>
-    <p>
-      Think of it as an IMDB but for music. This 
-      database contains thousands of songs, albums, and 
-      artists and information about them. Additional features
-      include allowing users to review and rate
-      songs, as well as administrator accounts to
-      moderate such behavior. PSQL Database filled with
-      data from the Spotify API.
-    </p>
 
-    <a href = "https://github.com/angsam-git/MelodyDB" target="_blank" class="proj_git"><img src = "static/images/github-light.png" style="height: 100%; width: auto;"></img></a>
+    <!-- projects and footer-->
+    <div class = "main_proj_section">
 
-  </div>
-  </div>
-  <div class = "divider"></div>   
-  <!-- project container --> 
-  <div class = "proj_container" id='proj_container'>
-  <input type="radio" name = "r2" id = "r3" checked>
-  <input type="radio" name = "r2" id = "r4">
-  <input type="radio" name = "r2" id = "r5">
+      <!-- project container --> 
+      <div class = "proj_container_wrapper" id='proj_container_wrapper'>
+        <a href="https://github.com/angsam-git/MelodyDB" target="_blank">
+          <div class = "proj_container">
+            <div class = "img_container imga"></div>
+            <div class = "text_container">
+              <div class = "proj_description">
+                <header>MELODYDB</header>
+                <p>Music Database of thousands of artists, albums, and songs.
+                  Front end allows users to search through the database, comment on, and rate albums and songs.</p>
+              </div>
+              <div class = "proj_tech">
+                <div class = "proj_sw">
+                  <header>TECHNOLOGIES</header>
+                  <div class = "technologies">
+                    <div class = "python_tech"></div>
+                    <div class = "flask_tech"></div>
+                    <div class = "psql_tech"></div>
+                    <div class = "html_tech"></div>
+                    <div class = "css_tech"></div>
+                    <div class = "js_tech"></div>
+                  </div>
+                </div>
+                <div class = "proj_apis">
+                  <header>APIs</header>
+                  <div class = "apis">
+                    <div class = "spotify_api"></div>
+                  </div>
+                </div>
+              </div>
 
-  <div class = "img_container" id='img_container'>
-    <a class = "prev" onclick="prevSlide(1)">&#10094;</a>
-    <a class = "next" onclick="nextSlide(1)">&#10095;</a>
-
-    <div class ="slides_container" id = 'slides_container'>
-      
-      <div class = "slide s4">
-        <img src = "static/images/srnode.PNG" class = "proj_img"></img>
-      </div>
-
-      <div class = "slide s5">
-        <img src = "static/images/sr.gif" class = "proj_img"></img>
-      </div>
-
-      <div class = "slide s6">
-        <img src = "static/images/selectiverepeat.png" class = "proj_img"></img>
-      </div>
-
-      <div class = "slide s7"></div>
-
-      <div class = "img_nav">
-        <label for="r3" class="circle"></label>
-        <label for="r4" class="circle"></label>
-        <label for="r5" class="circle"></label>
-      </div>
-    </div>
-  </div>
-  <div class = "proj_txt" id = 'proj_txt'>
-    <h1>
-      Selective Repeat </br>
-      Protocol Emulator
-    </h1>
-    <img src = "static/images/c_icon.png" class = "language_img"></img>
-
-    <p>
-      Emulation of the selective repeat protocol.
-      Packets are represented as chars. Program 
-      features allow for dropping packets and ACKs on a
-      deterministic and probabilistic basis. Utilizes
-      socket programming and multithreading to
-      send and receive packets.
-    </p>
-
-    <a href = "https://github.com/angsam-git/SR-Emulator" target="_blank" class="proj_git"><img src = "static/images/github-light.png" style="height: 100%; width: auto;"></img></a>
-
-  </div>
-  </div>
-  <div class = "divider"></div>
-
-  <!-- project container --> 
-    <div class = "proj_container" id='proj_container'>
-      <input type="radio" name = "r" id = "r0" checked>
-      <input type="radio" name = "r" id = "r1">
-      <input type="radio" name = "r" id = "r2">
-
-      <div class = "img_container" id='img_container'>
-        <a class = "prev" onclick="prevSlide(0)">&#10094;</a>
-        <a class = "next" onclick="nextSlide(0)">&#10095;</a>
-
-        <div class ="slides_container" id = 'slides_container'>
-          
-          <div class = "slide s0">
-            <img src = "static/images/iw2.png" class = "proj_img"></img>
+            </div>
           </div>
-
-          <div class = "slide s1">
-            <img src = "static/images/iw.gif" class = "proj_img"></img>
-          </div>
-
-          <div class = "slide s2">
-            <img src = "static/images/iw.png" class = "proj_img"></img>
-          </div>
-
-          <div class = "slide s3"></div>
-
-          <div class = "img_nav">
-            <label for="r0" class="circle"></label>
-            <label for="r1" class="circle"></label>
-            <label for="r2" class="circle"></label>
-          </div>
-        </div>
+        </a>
       </div>
-      <div class = "proj_txt" id = 'proj_txt'>
-        <h1>
-          InspireWeather
-        </h1>
-        <img src = "static/images/java.png" class = "language_img"></img>
 
-        <p>
-          This is an app that provides inspirational
-          quotes along with a full weather report. 
-          Features allow for browsing the weather forecast
-          based on both an hourly and daily basis. Each
-          weather card displays with an icon displaying
-          the appropriate weather. Utilizes the DarkSky API
-          and the Google Places API.
-        </p>
+      <!-- project container --> 
+      <div class = "proj_container_wrapper" id='proj_container_wrapper'>
+        <a href="https://github.com/angsam-git/SR-Emulator" target="_blank">
+          <div class = "proj_container">
+            <div class = "img_container imgb"></div>
+            <div class = "text_container">
+              <div class = "proj_description">
+                <header>SR PROTOCOL EMULATOR</header>
+                <p>Emulation of the selective repeat protocol.
+                  Socket programming and multithreading used to allow sending and receiving of packets/ACKs.</p>
+              </div>
+              <div class = "proj_tech">
+                <div class = "proj_sw">
+                  <header>TECHNOLOGIES</header>
+                  <div class = "technologies">
+                    <div class = "c_tech"></div>
+                  </div>
+                </div>
+              </div>
 
-        <a href = "https://github.com/angsam-git/InspireWeather" target="_blank" class="proj_git"><img src = "static/images/github-light.png" style="height: 100%; width: auto;"></img></a>
-
+            </div>
+          </div>
+        </a>
       </div>
-    </div>
-    <div class = "divider"></div>
 
-    <!-- project container --> 
-  <div class = "proj_container" id='proj_container'>
-    <input type="radio" name = "r4" id = "r9" checked>
-    <input type="radio" name = "r4" id = "r10">
-    <input type="radio" name = "r4" id = "r11">
-  
-    <div class = "img_container" id='img_container'>
-      <a class = "prev" onclick="prevSlide(3)">&#10094;</a>
-      <a class = "next" onclick="nextSlide(3)">&#10095;</a>
-  
-      <div class ="slides_container" id = 'slides_container'>
-        
-        <div class = "slide s12">
-          <img src = "static/images/nooks2.png" class = "proj_img"></img>
-        </div>
-  
-        <div class = "slide s13">
-          <img src = "static/images/nooks3.png" class = "proj_img"></img>
-        </div>
-  
-        <div class = "slide s14">
-          <img src = "static/images/nooks.png" class = "proj_img"></img>
-        </div>
-  
-        <div class = "slide s15"></div>
-  
-        <div class = "img_nav">
-          <label for="r9" class="circle"></label>
-          <label for="r10" class="circle"></label>
-          <label for="r11" class="circle"></label>
-        </div>
+      <!-- project container --> 
+      <div class = "proj_container_wrapper" id='proj_container_wrapper'>
+        <a href="https://github.com/angsam-git/InspireWeather" target="_blank">
+          <div class = "proj_container">
+            <div class = "img_container imgc"></div>
+            <div class = "text_container">
+              <div class = "proj_description">
+                <header>INSPIREWEATHER</header>
+                <p>Android app which provides an inspirational quote with a full weather report.
+                  UI allows users to adjust unit settings and navigate through forecasts.</p>
+              </div>
+              <div class = "proj_tech">
+                <div class = "proj_sw">
+                  <header>TECHNOLOGIES</header>
+                  <div class = "technologies">
+                    <div class = "java_tech"></div>
+                    <div class = "android_tech"></div>
+                  </div>
+                </div>
+                <div class = "proj_apis">
+                  <header>APIs</header>
+                  <div class = "apis">
+                    <div class = "darksky_api"></div>
+                    <div class = "maps_api"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </a>
       </div>
+
+      <!-- project container --> 
+      <div class = "proj_container_wrapper" id='proj_container_wrapper'>
+        <a href="https://github.com/angsam-git/nooks" target="_blank">
+          <div class = "proj_container">
+            <div class = "img_container imgd"></div>
+            <div class = "text_container">
+              <div class = "proj_description">
+                <header>NOOKS</header>
+                <p>Apartment hunting website which organizes the apartment hunting process.
+                  Front end allows users to track apartment listings and organize them on a map and table. Uses MVC Framework.</p>
+              </div>
+              <div class = "proj_tech">
+                <div class = "proj_sw">
+                  <header>TECHNOLOGIES</header>
+                  <div class = "technologies">
+                    <div class = "rails_tech"></div>
+                    <div class = "sqlite_tech"></div>
+                    <div class = "html_tech"></div>
+                    <div class = "css_tech"></div>
+                    <div class = "js_tech"></div>
+                  </div>
+                </div>
+                <div class = "proj_apis">
+                  <header>APIs</header>
+                  <div class = "apis">
+                    <div class = "maps_api"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class = "footer">
+        <p>Copyright 2022 © Angel Samuel Mendez</p>
+        <a href="https://github.com/angsam-git/portfolio_site" target="_blank">WEBSITE GITHUB REPO</a>
+      </div>
+
+
+
+
+
     </div>
-    <div class = "proj_txt" id = 'proj_txt'>
-      <h1>
-        Nooks
-      </h1>
-      <img src = "static/images/rails_icon.png" class = "language_img"></img>
-      <p>
-        Apartment hunting website which organizes the apartment hunting process. 
-        It allows users to add and track their apartment listings and see them on a map
-        through the Google Geocoding API. It can also serve
-        as a collaborative space which allows users to create groups with
-        their friends. Currently WIP.
-      </p>
-  
-      <a href = "https://github.com/angsam-git/nooks" target="_blank" class="proj_git"><img src = "static/images/github-light.png" style="height: 100%; width: auto;"></img></a>
-  
-    </div>
-    </div>
-    <div class = "divider"></div>   
-    <div class = "footer"></div>
-    <script src="static/animations.js"></script>
     <script src="static/wrapper.js"></script>
+    <script src="static/animations.js"></script>
     <script src="static/nav.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
