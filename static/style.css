@@ -34,20 +34,22 @@ body .main_div .toolbar{
     height:20%;
     width: 100%;
     font-family: "TitilliumWeb-Regular";
-    transform: translatey(-200px);
     z-index: 3;
     background-color: rgba(0, 0, 0, 0);
 }
 
+
 body .main_div .toolbar .logo_button{
     position: absolute;
-    top:30%;
+    top: 30%;
     height: 40%;
     width: 130px;
+    max-width: 25vw;
     background-image: url("images/asm_light.png");
     background-size: contain;
     background-repeat: no-repeat;
     left: 5%;
+
 }
 
 body .main_div .toolbar .links{
@@ -58,6 +60,7 @@ body .main_div .toolbar .links{
     right: 5%;
     display: flex;
     justify-content: space-evenly;
+    opacity: 0;
 }
 
 body .main_div .toolbar .links > div:nth-child(1), body .main_div .toolbar .links > div:nth-child(3){
@@ -83,6 +86,7 @@ body .main_div .toolbar .links a{
 body .main_div .toolbar .links a:hover{
     text-decoration: none;
     color: grey;
+    
 }
 
 body .main_div .toolbar .links p{
@@ -198,28 +202,32 @@ body .li{
     border-radius: 20%;
 }
 
-body .dropdown .btn{
-    position: relative;
+body .dropdown .btn-block{
+    position: absolute;
+    height: 100% !important;
+    width: 100% !important;
+    max-height: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
 }
+
 
 body .dropdown {
     position: absolute;
-    top: 12px;
-    right: 24px;
-    height:40px;
-}
-
-body .dropdown {
-    position: absolute;
-    top: 56px;
-    right: 80px;
-    height:40px;
+    top: 40%;
+    right: 10%;
+    height: 20%;
+    width: 30px;
+    max-width: 5% !important;
+    opacity: 0;
 }
 
 body .dropdown > div{
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 14%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -232,14 +240,17 @@ body .dropdown > div:nth-child(1){
 }
 
 
-body .dropdown > div:nth-child(2), body .dropdown > div:nth-child(3){
+body .dropdown > div:nth-child(2){
     content: '';
-    top: 10px;
+    top: 45%;
     background-color: #FFFFFF;
 }
 
 body .dropdown > div:nth-child(3){
-    top: 20px;
+    top: 90%;
+    content: '';
+    background-color: #FFFFFF;
+
 }
 
 body .toolbar .dropdown .dropdown-menu{
@@ -261,10 +272,7 @@ body .toolbar .dropdown .dropdown-menu a:hover{
     background-color: rgb(31, 31, 31);
 }
 
-body .toolbar .dropdown .btn{
-    width: 36px;
-    height: 30px;
-}
+
 
 body .toolbar .dropdown .btn:focus{
     box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
@@ -299,6 +307,7 @@ body .logo_bg_a{
     margin-top: 4%;
     z-index: 1;
     clip-path: polygon(50% 0, 100% 100%, 85% 100%, 50% 20%, 15% 100%, 0 100%);
+    -webkit-clip-path: polygon(50% 0, 100% 100%, 85% 100%, 50% 20%, 15% 100%, 0 100%);
     opacity: 0;
 }
 
@@ -314,10 +323,12 @@ body .logo_bg_ma, body .logo_bg_mb{
 
 body .logo_bg_ma{
     clip-path: polygon(50% 0, 100% 100%, 85% 100%, 50% 20%, 15% 100%, 0 100%);
+    -webkit-clip-path: polygon(50% 0, 100% 100%, 85% 100%, 50% 20%, 15% 100%, 0 100%);
 }
 
 body .logo_bg_mb{
     clip-path: polygon(50% 0, 100% 100%, 85% 100%, 50% 20%, 15% 100%, 0 100%);
+    -webkit-clip-path: polygon(50% 0, 100% 100%, 85% 100%, 50% 20%, 15% 100%, 0 100%);
     margin-left: 60.5%;
 }
 
@@ -550,30 +561,33 @@ body .proj_description p{
 
 body .proj_tech{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     height: 65%;
     width: 100%;
+    margin: 0 auto;
+
 }
 
-body .proj_sw, .proj_apis{
+body .proj_sw, .proj_api{
     height: 50%;
     width: 100%;
     overflow: hidden;
-}
-
-body .proj_sw, .proj_apis{
     color: black;
     text-align: center;
 }
 
-body .proj_sw header, .proj_apis header{
+
+body .proj_sw header, .proj_api header{
     font-family: "TitilliumWeb-SemiBold";
     font-size: 2vw;
     margin-top: 2%;
 }
 
 body .technologies, .apis{
-    display: flex;
+    display: inline-flex;
+    row-gap: 12px;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     margin-top: 10px;
     width: 100%;
@@ -585,13 +599,14 @@ body .technologies{
 }
 
 body .apis{
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 
-body .python_tech, .flask_tech, .psql_tech, .rails_tech, .java_tech, .c_tech, .html_tech, .css_tech, .js_tech, .android_tech, .sqlite_tech{
+body .tech{
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     height: 50%;
     width: 15%;
 }
@@ -606,47 +621,47 @@ body .spotify_api, .darksky_api, .maps_api{
 
 /* icons for technologies and apis */
 
-body .python_tech{
+body .python{
     background-image: url("images/python_icon.png");
 }
 
-body .rails_tech{
+body .rails{
     background-image: url("images/rails_icon.png");
 }
 
-body .java_tech{
+body .java{
     background-image: url("images/java_icon.png");
 }
 
-body .c_tech{
+body .c{
     background-image: url("images/c_icon.png");
 }
 
-body .psql_tech{
+body .psql{
     background-image: url("images/psql_icon.png");
 }
 
-body .flask_tech{
+body .flask{
     background-image: url("images/flask_icon.png");
 }
 
-body .html_tech{
+body .html{
     background-image: url("images/html_icon.png");
 }
 
-body .css_tech{
+body .css{
     background-image: url("images/css_icon.png");
 }
 
-body .js_tech{
+body .js{
     background-image: url("images/js_icon.png");
 }
 
-body .sqlite_tech{
+body .sqlite{
     background-image: url("images/sqlite_icon.png");
 }
 
-body .android_tech{
+body .android{
     background-image: url("images/android_icon.png");
 }
 
@@ -665,7 +680,6 @@ body .maps_api{
 
 /* footer */
 body .footer{
-    margin-top: 5vw;
     height: 16vw;
     width:100%;
     background: linear-gradient(0deg,  rgba(54, 0, 0, 1) 0%, rgba(0,0,0,1) 100%);
@@ -681,4 +695,68 @@ body .footer p{
 
 body .footer a{
     color:#D4AF37;
+}
+
+body .fa{
+    margin-top: 5vw;
+}
+
+body .contact{
+    text-align: center;
+    color:white;
+    width:500px;
+    max-width: 80%;
+    height:100px;
+    margin-top: 10%;
+    margin: 0 auto;
+    font-family: "TitilliumWeb-SemiBold";
+}
+
+body .contact p{
+    user-select: none;
+    font-size: 50pt;
+}
+
+body .contact input{
+    background-color: white;
+    border-style: groove;
+    border-color: black;
+    border-width: 1px;
+    padding:5px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 99%;
+}
+
+body .contact input:nth-child(3){
+    margin-top: 10px;
+}
+
+body .contact textarea{
+    background-color: white;
+    border-style: groove;
+    border-color: black;
+    border-width: 1px;
+    padding:5px;
+    resize: none;
+    border-radius: 10px;
+    width: 500px;
+    height: 150px;
+    vertical-align: top;
+    margin-top: 20px;
+    max-width: 99%;
+}
+
+body .contact button{
+    color: white;
+    background-color: #D4AF37;
+    margin-top: 5px;
+    width: 70px;
+    border-radius: 20px;
+    border: none;
+}
+
+body .contact button:hover{
+    background-color: #360000;
+    transition-duration: .2s;
 }

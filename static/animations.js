@@ -1,6 +1,5 @@
 function loadUp(){
     wrapDiv();
-    
     var logo_conceal = document.getElementById("logo_conceal");
     var logo_wrapper = document.getElementById("logo_wrapper");
     var logo_a = document.getElementById("logo_bg_a");
@@ -19,15 +18,23 @@ function loadUp(){
     logo_s.style.WebkitTransitionDuration='2s';
     logo_ma.style.WebkitTransitionDuration='2s';
     logo_mb.style.WebkitTransitionDuration='2s';
-    toolbar.style.WebkitTransitionDuration='2s';
     top_arr.style.WebkitTransitionDuration='2s';
     mid_arr.style.WebkitTransitionDuration='2s';
     bot_arr.style.WebkitTransitionDuration='2s';
 
+    logo_conceal.style.transitionDuration='3s';
+    logo_wrapper.style.transitionDuration='1.8s';
+    logo_a.style.transitionDuration='2s';
+    logo_s.style.transitionDuration='2s';
+    logo_ma.style.transitionDuration='2s';
+    logo_mb.style.transitionDuration='2s';
+    top_arr.style.transitionDuration='2s';
+    mid_arr.style.transitionDuration='2s';
+    bot_arr.style.transitionDuration='2s';
+
     logo_a.style.opacity='0.5';
     logo_ma.style.opacity='0.5';
     logo_mb.style.opacity='0.5';
-    toolbar.style.transform = "translatey(0px)";
 
 
     setTimeout(function(){
@@ -94,25 +101,25 @@ function dropdown(){
     dropdiv.style.opacity = 1;
     
 
-    mid.style.transform = "translatey(-10px) skew(-40deg)";
+    mid.style.transform = "translatey(-421%) skew(-40deg)";
     
 
     setTimeout(function(){
       dropdiv.style.WebkitTransitionDuration='1s';
-      top.style.opacity = 0;
-      top.style.transform = "translatey(10px) skew(-40deg)";
-      mid.style.transform = "translatey(10px) translatey(-10px) skew(-40deg)";
-      bot.style.transform = "translatey(-10px) skew(-40deg)";
+      top.style.transform = "translatey(321%) skew(-40deg)";
+      mid.style.transform = "translatey(321%) translatey(-321%) skew(-40deg)";
+      bot.style.transform = "translatey(-421%) skew(-40deg)";
       dropdiv.style.transform = "translatey(0px)";
+      top.style.opacity = 0;
     }, 250);
   
     mid.style.WebkitTransitionDuration='.5s';
     bot.style.WebkitTransitionDuration='.5s';
 
     setTimeout(function(){
-      top.style.transform = "translatey(10px) rotate(30deg)";
-      mid.style.transform = "translatey(10px) translatey(-10px) rotate(30deg) ";
-      bot.style.transform = "translatey(-10px) rotate(-30deg)";
+      top.style.transform = "translatey(321%) rotate(45deg)";
+      mid.style.transform = "translatey(0px) rotate(45deg)";
+      bot.style.transform = "translatey(-321%) rotate(-45deg)";
     }, 500);
     setTimeout(function(){
       dropdiv.style.WebkitTransitionDuration='0s';
@@ -126,9 +133,9 @@ function dropdown(){
     bot.style.WebkitTransitionDuration='.5s';
     dropdiv.style.WebkitTransitionDuration='1s';
     
-    top.style.transform = "translatey(10px) skew(-40deg)";
+    top.style.transform = "translatey(321%) skew(-40deg)";
     mid.style.transform = "skew(-40deg)";
-    bot.style.transform = "translatey(-10px) skew(-40deg)";
+    bot.style.transform = "translatey(-321%) skew(-40deg)";
     dropdiv.style.transform = "translatey(-100%)"
 
     setTimeout(function(){
