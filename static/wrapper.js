@@ -17,7 +17,6 @@ function format_pg(){
   
   var links = document.getElementById("links");
   var dropdown = document.getElementById("drop_down");
-  var blah = document.getElementById("blfgfdsgfs");
   var about_text = document.getElementById("about_text");
 
   links.style.opacity = "0";
@@ -81,7 +80,6 @@ function format_pg_b(){
   
   var links = document.getElementById("links");
   var dropdown = document.getElementById("drop_down");
-  var blah = document.getElementById("blfgfdsgfs");
   var about_text = document.getElementById("about_text");
 
   links.style.opacity = "1";
