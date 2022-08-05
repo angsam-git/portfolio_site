@@ -49,7 +49,6 @@ body .main_div .toolbar .logo_button{
     background-size: contain;
     background-repeat: no-repeat;
     left: 5%;
-
 }
 
 body .main_div .toolbar .links{
@@ -232,7 +231,6 @@ body .dropdown > div{
     align-items: center;
     justify-content: center;
     transform: skew(-40deg);
-    
 }
 
 body .dropdown > div:nth-child(1){
@@ -251,6 +249,91 @@ body .dropdown > div:nth-child(3){
     content: '';
     background-color: #FFFFFF;
 
+}
+
+body .slide-top-in {
+    animation: slide-top-in .25s both;
+}
+
+body .slide-top-out {
+    animation: slide-top-out .25s both;
+    animation-delay: .25s;
+}
+
+@keyframes slide-top-in {
+    99% {
+        transform: translateY(320%) skew(-40deg);
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@keyframes slide-top-out {
+    0% {
+        opacity: 0;
+        transform: translateY(320%) skew(-40deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) skew(-40deg);
+    }
+}
+
+body .rotate-mid {
+    animation: rotate-mid .25s both;
+    animation-delay: .25s;
+}
+
+body .rotate-mid2 {
+    animation: rotate-mid2 .25s both;
+}
+
+@keyframes rotate-mid {
+    0% {
+        transform: skew(-40deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes rotate-mid2 {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: skew(-40deg);
+    }
+}
+
+body .animate-bottom {
+    animation: animate-bottom .5s both;
+}
+
+body .animate-bottom2 {
+    animation: animate-bottom2 .5s both;
+}
+
+@keyframes animate-bottom {
+    50% {
+        transform: translatey(-1.8vh) skew(-40deg);
+    }
+    100% {
+        transform: translatey(-1.8vh) rotate(-45deg);
+    }
+}
+
+@keyframes animate-bottom2 {
+    0% {
+        transform: translatey(-1.8vh) rotate(-45deg);
+    }
+    50% {
+        transform: translatey(-1.8vh) skew(-40deg);
+    }
+    100% {
+        transform: skew(-40deg);
+    }
 }
 
 body .toolbar .dropdown .dropdown-menu{

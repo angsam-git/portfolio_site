@@ -1,7 +1,6 @@
 
 
 function format_pg(){
-  var h;
   var proj_container_wrappers = document.getElementsByClassName("proj_container_wrapper");
   var proj_containers = document.getElementsByClassName("proj_container");
   var img_containers = document.getElementsByClassName("img_container");
@@ -16,7 +15,7 @@ function format_pg(){
   var proj_apis = document.getElementsByClassName("proj_api");
   
   var links = document.getElementById("links");
-  var dropdown = document.getElementById("drop_down");
+  var drop_down = document.getElementById("drop_down");
   var about_text = document.getElementById("about_text");
 
   links.style.opacity = "0";
@@ -63,7 +62,6 @@ function format_pg(){
 
 function format_pg_b(){
 
-  var h;
 
   var proj_container_wrappers = document.getElementsByClassName("proj_container_wrapper");
   var proj_containers = document.getElementsByClassName("proj_container");
@@ -79,7 +77,7 @@ function format_pg_b(){
   var proj_apis = document.getElementsByClassName("proj_api");
   
   var links = document.getElementById("links");
-  var dropdown = document.getElementById("drop_down");
+  var drop_down = document.getElementById("drop_down");
   var about_text = document.getElementById("about_text");
 
   links.style.opacity = "1";
@@ -115,7 +113,10 @@ function format_pg_b(){
     proj_text_headers[i].style.fontSize = "2vw";
     proj_texts[i].style.fontSize = "1.5vw";
   }
-  about_text.style.fontSize = '22pt';
+
+  if (about_text) {
+    about_text.style.fontSize = '22pt';
+  }
 
   for (var j = 0; j < techs.length; j++){
     techs[j].style.width = "15%"
@@ -123,29 +124,22 @@ function format_pg_b(){
 }
 
 function wrapDiv(){
+  
+
 
 
   if ((window.innerWidth < screen.width / 1.9) || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) // under
   {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      var li = document.getElementById("li");
-      var gh = document.getElementById("gh");
-      var email = document.getElementById("email");
-      // TO DO MAKE THE COLUMN FLEX FOR MOBILE      
-    }
-    
-
     format_pg();
   }
-  else 
-  {
-
+  else {
 
     format_pg_b();
+
     if (!flag){
+
       dropdown();
-    }
-    
+    } 
   }
 }
 window.onresize = wrapDiv;
