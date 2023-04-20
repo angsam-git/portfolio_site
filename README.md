@@ -1,1 +1,1 @@
-www.ang-sam.com
+www.angsam.dev
